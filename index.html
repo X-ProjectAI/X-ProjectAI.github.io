@@ -6,48 +6,79 @@
     <title>ProjectAI - Intelligent Solutions for the Future</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Additional styles specific to the index page */
+        /* Styles specific to this homepage */
         .hero {
             text-align: center;
-            padding: 80px 20px;
-            background-color: #2c3e50;
+            padding: 100px 20px;
+            background: linear-gradient(45deg, var(--secondary-color), #34495e);
             color: #ffffff;
         }
         .hero h1 {
-            font-size: 2.8em;
+            font-size: 3.5em;
             margin-bottom: 20px;
+            color: #ffffff;
         }
         .hero p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 0 auto 30px;
+            font-size: 1.3em;
+            max-width: 650px;
+            margin: 0 auto 40px;
         }
-        .cta-button {
-            display: inline-block;
-            background-color: #3498db;
-            color: #ffffff;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #2980b9;
-        }
-        .features {
-            display: flex;
-            justify-content: space-around;
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
             text-align: center;
-            padding: 40px 20px;
+            margin-bottom: 50px;
         }
-        .feature {
-            max-width: 250px;
+        .feature-card {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #e7e7e7;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .feature h3 {
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .feature-card h3 {
             margin-top: 0;
+            border: none;
         }
+        
+        /* New Product Section Styles */
+        .product-section {
+            padding: 40px 0;
+        }
+        .product-section:nth-child(odd) {
+             background-color: #fdfdfd;
+        }
+        .product-content {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        .product-content h2 {
+            text-align: left;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        .product-content h3 {
+            border: none;
+            font-size: 1.4em;
+            margin-top: 25px;
+        }
+        .product-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .product-content li {
+             margin-bottom: 10px;
+        }
+        .product-content .cta-button {
+            margin-top: 25px;
+        }
+
     </style>
 </head>
 <body>
@@ -59,35 +90,69 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <div class="hero">
-        <h1>Unlock the Power of AI with ProjectAI</h1>
+        <h1>Unlock the Power of AI</h1>
         <p>Your intelligent partner for solving complex problems, automating tasks, and driving innovation forward.</p>
-        <a href="#get-started" class="cta-button">Get Started Now</a>
+        <a href="#products" class="cta-button">Explore Our Products</a>
     </div>
 
     <div class="container">
-        <h2>Our Core Features</h2>
-        <div class="features">
-            <div class="feature">
+        <h2>Why Choose ProjectAI?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
                 <h3>Intelligent Automation</h3>
                 <p>Streamline your workflows and increase efficiency with our cutting-edge automation tools.</p>
             </div>
-            <div class="feature">
+            <div class="feature-card">
                 <h3>Advanced Data Analysis</h3>
                 <p>Turn raw data into actionable insights with powerful AI-driven analytics and reporting.</p>
             </div>
-            <div class="feature">
+            <div class="feature-card">
                 <h3>Scalable Solutions</h3>
                 <p>Our infrastructure is built to grow with you, from small projects to enterprise-level demands.</p>
             </div>
         </div>
     </div>
+    
+    <div id="products">
 
+        <div class="product-section">
+            <div class="product-content">
+                <h2>Product 1: The Automator</h2>
+                <p>This is our premier AI solution designed for maximum efficiency. The Automator analyzes your workflows and optimizes them in real-time, saving you time and reducing operational costs.</p>
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>Real-time process optimization</li>
+                    <li>Advanced predictive analytics</li>
+                    <li>Seamless integration with existing tools</li>
+                    <li>24/7 automated monitoring</li>
+                </ul>
+                <a href="#" class="cta-button">Purchase The Automator</a>
+            </div>
+        </div>
+
+        <div class="product-section">
+            <div class="product-content">
+                <h2>Product 2: Insight Engine</h2>
+                <p>Unlock the hidden potential in your data. The Insight Engine is a powerful AI tool that provides deep, actionable insights from complex datasets, helping you make smarter business decisions.</p>
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>Natural language data queries</li>
+                    <li>Automated report generation</li>
+                    <li>Interactive data visualization dashboards</li>
+                    <li>High-accuracy forecasting models</li>
+                </ul>
+                <a href="#" class="cta-button">Purchase Insight Engine</a>
+            </div>
+        </div>
+
+    </div>
     <footer>
         <p>&copy; 2025 ProjectAI. All rights reserved.</p>
         <p>
